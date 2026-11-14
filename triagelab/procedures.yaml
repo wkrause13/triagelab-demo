@@ -45,7 +45,7 @@ spec:
       max_questions: 0
       match_condition: '"data-loss" in ticket.tags'
       auto_runs: true
-      auto_run_condition: '!("needs-review" in ticket.tags)'
+      auto_run_condition: '!("needs-review" in ticket.tags) && !("legal-hold" in ticket.tags)'
     evidence:
       - kind: attachment
         match: .py
